@@ -1,32 +1,23 @@
 using System;
 public class PromptGenerator {
-    public int questionNumber = 1;
     public void MyMethod(){
-        while (questionNumber <= 5) {
-            switch (questionNumber){
-        case 1:
-            Console.Write("What kind of day are you having, and why? ");
-            string name = Console.ReadLine();
-            break;
-        case 2:
-            Console.Write("What are all the things you're grateful for today? ");
-            int age = int.Parse(Console.ReadLine());
-            break;
-        case 3:
-            Console.Write("What are three good things about today? ");
-            string color = Console.ReadLine();
-            break;
-        case 4:
-            Console.Write("What are the things you could do today to start moving towards your goals? ");
-            string address = Console.ReadLine();
-            break;
-        case 5:
-            Console.Write("What made today unique? ");
-            string phoneNumber = Console.ReadLine();
-            break;
-    }
-    questionNumber++;
+         string[] questions = {
+            "What was the best thing that happened to you today?",
+            "What is something that made you laugh today?",
+            "What steps did you take today towards a goal you’re working on?",
+            "Who made your day better today? How can you pay that feeling forward?",
+            "What made today unique?",
+            "What is one thing you want to remember from today?",
+            "When did you feel most authentically yourself today?",
+            "How can you make tomorrow (even) better than today?"
+        };
+        Random rand = new Random();
+        for (int i = 0; i < 1; i++) {
+            int questionIndex = rand.Next(0, questions.Length);
+            Console.Write(questions[questionIndex] + " ");
+            string response = Console.ReadLine();
+        }
+        
 }
 
-}
 }
