@@ -1,6 +1,6 @@
 using System;
 public class PromptGenerator {
-    public void MyMethod(){
+    public void Prompt(){
          string[] questions = {
             "What was the best thing that happened to you today?",
             "What is something that made you laugh today?",
@@ -17,6 +17,7 @@ public class PromptGenerator {
             Console.Write(questions[questionIndex] + " ");
             string response = Console.ReadLine();
         }
+        Program.mainclass();
         
 }
 
